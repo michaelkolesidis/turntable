@@ -1,0 +1,109 @@
+/****** General ******/
+:root {
+  --blue: #024ae3;
+  --white: #d4fff3;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/****** Elements ******/
+.turntable {
+  position: relative;
+  margin: 0 auto;
+  width: 270px;
+}
+
+.record {
+  -webkit-animation: spin 5s infinite;
+  animation: spin 500s infinite;
+  animation-timing-function: linear;
+  padding: 0 15px;
+  height: 270px;
+  width: 270px;
+}
+
+.tonearm {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  height: 241.783px;
+  width: 135px;
+}
+
+/****** Animation ******/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(36000deg);
+    transform: rotate(36000deg);
+  }
+}
+
+/****** Media Queries ******/
+@media (min-width: 768px) {
+  .turntable {
+    width: 345px;
+  }
+  .record {
+    height: 345px;
+    width: 345px;
+  }
+  .tonearm {
+    height: 302.233px;
+    width: 168.75px;
+  }
+}
+
+@media (min-width: 992px) {
+  .turntable {
+    width: 455px;
+  }
+  .record {
+    height: 455px;
+    width: 455px;
+  }
+  .tonearm {
+    height: 390.9px;
+    width: 218.25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .turntable {
+    width: 555px;
+  }
+  .record {
+    height: 555px;
+    width: 555px;
+  }
+  .tonearm {
+    height: 471.5px;
+    width: 263.25px;
+  }
+}
